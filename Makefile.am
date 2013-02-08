@@ -1,8 +1,4 @@
 SUBDIRS = src
 
-EXTRA_DIST = \
-	COPYING \
-	INSTALL \
-	README \
-	NEWS \
-	ChangeLog
+EXTRA_DIST=COPYING ChangeLog INSTALL NEWS README README.html	       \
+	 README.md
