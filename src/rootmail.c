@@ -43,9 +43,12 @@ rootmail_hook(
 	MsgInfo * const	msginfo = (MsgInfo *) source;
 
 	if( msginfo )	{
+		FolderItem * const	folder = msginfo->folder;
+
 		fprintf(
 			NewLog,
-			"%-31.31s  %-54.54s  %s\n",
+			"%-23.23s  %-31.31s  %-54.54s  %.80s\n",
+			folder ? defstr( folder->name ) : "",
 			defstr( msginfo->date ),
 			defstr( msginfo->from ),
 			defstr( msginfo->subject )
