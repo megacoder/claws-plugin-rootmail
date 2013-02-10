@@ -78,7 +78,7 @@ rootmail_hook(
 		/* Show our work					 */
 		fprintf(
 			NewLog,
-			"%-23.23s  "
+			"%-12.12s  "
 			"%4.4s "
 			"%2.2s "
 			"%3.3s "
