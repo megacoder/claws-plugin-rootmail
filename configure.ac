@@ -6,14 +6,14 @@ AC_CONFIG_HEADERS(config.h)
 PACKAGE=rootmail
 
 dnl plugin version
-MAJOR_VERSION=0
+MAJOR_VERSION=1
 MINOR_VERSION=0
-MICRO_VERSION=16
+MICRO_VERSION=0
 EXTRA_VERSION=0
 
 if test \( $EXTRA_VERSION -eq 0 \); then
     if test \( $MICRO_VERSION -eq 0 \); then
-        VERSION=${MAJOR_VERSION}.${MINOR_VERSION} 
+        VERSION=${MAJOR_VERSION}.${MINOR_VERSION}
     else
 	VERSION=${MAJOR_VERSION}.${MINOR_VERSION}.${MICRO_VERSION}
     fi
@@ -65,7 +65,7 @@ AC_SUBST(CLAWS_MAIL_PLUGINDIR)
 
 dnl Check for GLib
 PKG_CHECK_MODULES(GLIB, glib-2.0 >= 2.6 gmodule-2.0 >= 2.6 gobject-2.0 >= 2.6 gthread-2.0 >= 2.6)
-      
+
 GLIB_GENMARSHAL=`pkg-config --variable=glib_genmarshal glib-2.0`
 AC_SUBST(GLIB_GENMARSHAL)
 
