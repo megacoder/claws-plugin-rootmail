@@ -3,6 +3,5 @@
 	for x in $(seq 1 60); do
 		echo
 	done
-	BARS="-----------------------------------------------------------------"
-	echo "${BARS}${BARS}${BARS}"
 ) >>~/Mail/RootMail
+${0:h}/marker-line
